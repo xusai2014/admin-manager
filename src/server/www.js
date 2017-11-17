@@ -11,7 +11,7 @@ app.use('/node_modules',express.static(join(ROOT_PATH, 'node_modules')));
 app.use('/dist',express.static(join(ROOT_PATH, 'dist')));
 app.use('/bin',express.static(join(ROOT_PATH, 'bin')));
 app.use(bodyParser.json());
-app.use('/api/*',api);
+app.use('/api',api);
 app.get('/*', function(req, res) {
     res.send(`
         <html>
